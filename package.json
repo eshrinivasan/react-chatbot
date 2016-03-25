@@ -1,7 +1,7 @@
 {
   "name": "node-server-sass",
   "version": "1.0.0",
-  "description": "simple node server with angular front end",
+  "description": "angular and SASS compiler with node as server",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
