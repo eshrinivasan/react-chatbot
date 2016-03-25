@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-node_modules/
-=======
 # Logs
 logs
 *.log
@@ -34,4 +31,3 @@ node_modules
 
 # Optional REPL history
 .node_repl_history
->>>>>>> c479a611c94b1e3bb88cb03d2336a725504b8dc2
