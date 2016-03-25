@@ -10,7 +10,18 @@ module.exports = function (grunt) {
         watch: {
             scripts: {
                 files: ['./public/appmodule/**/*.js', '!./public/angularapp.js'],
-                tasks: ['jshint', 'concat:appmodule']
+                tasks: ['jshint', 'concat:appmodule', 'sass:dev']
+            }
+        },
+        sass: {
+            dev: {
+                options: {
+                    compress: false,
+                    sourcemap: 'none'
+                 },
+                files: {
+                    './public/style.css' : './public/sass/style.scss'
+                }
             }
         },
         concat: {
@@ -28,9 +39,11 @@ module.exports = function (grunt) {
         }
     });
     // Load tasks...
+    grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-concat');
     // Default task.
-    grunt.registerTask('default', ['concat', 'watch']);
+    grunt.registerTask('default', ['concat', 'sass:dev', 'watch']);
+    grunt.registerTask('dev', ['concat', 'sass:dev', 'watch']);
 };
