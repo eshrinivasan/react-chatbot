@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # simple-ng-node-server
 Uses node as server and angularjs app as client
 
@@ -7,3 +8,7 @@ Uses node as server and angularjs app as client
 4. Run "node server.js"
 
 The application runs at localhost:3000
+=======
+# ng-node-sass
+A simple project with Angular front end, Node backend and SASS compiler 
+>>>>>>> c479a611c94b1e3bb88cb03d2336a725504b8dc2
