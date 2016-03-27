@@ -4,9 +4,11 @@
   "description": "angular and SASS compiler with node as server",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "grunt",
+    "start": "node server.js"
   },
-  "author": "",
+  "repository": "https://github.com/eshrinivasan/ng-node-sass.git",
+  "author": "nsshrinivasan@gmail.com",
   "license": "ISC",
   "devDependencies": {
     "express": "^4.13.4",
@@ -17,5 +19,8 @@
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0",
     "http-server": "^0.9.0"
+  },
+  "engines": {
+    "node": "0.12.2"
   }
 }
