@@ -1,4 +1,17 @@
-var demoapp = angular.module('DemoApp', ['ui.router', 'ngAnimate']);
+var demoapp = angular.module('DemoApp', ['ui.router', 'ngAnimate', 'ngSanitize']);
+
+demoapp.config(function($provide){
+    $provide.decorator("$sanitize", function($delegate, $log){
+        return function(text, target){
+ 
+            var result = $delegate(text, target);
+            $log.info("$sanitize input: " + text);
+            $log.info("$sanitize output: " + result);
+ 
+            return result;
+        };
+    });
+});
 
 demoapp.config(function($stateProvider, $urlRouterProvider)	{
 		$stateProvider

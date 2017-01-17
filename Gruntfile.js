@@ -10,7 +10,7 @@ module.exports = function (grunt) {
         watch: {
             scripts: {
                 files: ['./public/appmodule/**/*.js', '!./public/angularapp.js'],
-                tasks: ['jshint', 'concat:appmodule', 'sass:dev']
+                tasks: ['jshint', 'concat:appmodule']
             }
         },
         sass: {
@@ -44,6 +44,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-concat');
     // Default task.
-    grunt.registerTask('default', ['concat', 'sass:dev', 'watch']);
+    grunt.registerTask('default', ['concat', 'watch']);
     grunt.registerTask('dev', ['concat', 'sass:dev', 'watch']);
 };

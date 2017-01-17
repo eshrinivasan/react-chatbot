@@ -1,4 +1,4 @@
-demoapp.controller('DemoController', function( $scope, $window, $state )
+demoapp.controller('DemoController', function( $scope, $window, $state , $sce)
 	{
 		$scope.transition = 'slide-left';
 		$scope.tabs = ['tab1', 'tab2', 'tab3', 'tab4'];
@@ -6,6 +6,16 @@ demoapp.controller('DemoController', function( $scope, $window, $state )
 		$scope.maxIndex = $scope.tabs.length;
 		$scope.left = false;
 		$scope.time = new Date();
+
+		$scope.links = [
+	          	"<a href='http://google.com'>Google</a>",
+		        "<a href='http://odetocode.com'>OdeToCode</a>",
+		        "<a href='http://twitter.com'>Twitter</a>"
+	    ];
+
+	     for (var i = 0; i < $scope.links.length; i++) {
+	        $scope.links[i] = $sce.trustAsHtml($scope.links[i]);
+	    }
 
 		next();
 

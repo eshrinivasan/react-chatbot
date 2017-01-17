@@ -44,16 +44,26 @@
 			</ul>
 		</nav>
 
+		<ul>
+			    <li ng-repeat="link in links"
+			        ng-bind-html="link">
+			    </li>
+			</ul>
+
 		<div class="content">
 			<div ui-view ng-class="transition">
 				default content
 			</div>
 		</div>
+
+		
 	</div>
 
   <script data-require="angular.js@1.2.10" data-semver="1.2.10" src="http://code.angularjs.org/1.2.10/angular.min.js"></script>
   <script data-require="angular-animate@1.2.11" data-semver="1.2.11" src="http://code.angularjs.org/1.2.11/angular-animate.min.js"></script>
   <script src="http://angular-ui.github.io/ui-router/release/angular-ui-router.min.js"></script>
+  <script src="//code.angularjs.org/1.2.20/angular-sanitize.min.js"></script>
   <script src="angularapp.js"></script>
+
 </body>
 </html>
